@@ -4,7 +4,6 @@ const axios = require('axios');
 
 function createProject(data, callback) {
     console.log(data);
-
     axios({
         url: config_api.project,
         method: 'POST',

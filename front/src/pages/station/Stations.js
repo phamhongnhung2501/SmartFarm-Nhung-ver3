@@ -151,67 +151,12 @@ class Project extends React.Component {
     }
 
     handleDate(date){
-        this.setState({
+        this.setState(prevState => ({
             temp: {
-                name: "",
-                sub_id: "G00",
-                manager: null,
-                seed: "",
+                ...prevState.temp,
                 started_plant: date,
-                stage_1: {
-                    stage_1_days: "",
-                    min_temp: "",
-                    max_temp: "",
-                    min_light: "",
-                    max_light: "",
-                    min_PH: "",
-                    max_PH: "",
-                    min_soil_moisture: "",
-                    max_soil_moisture: "",
-                    min_hum: "",
-                    max_hum: "",
-                },
-                stage_2: {
-                    stage_2_days: null,
-                    min_temp:  null,
-                    max_temp: null,
-                    min_light:  null,
-                    max_light:  null,
-                    min_PH:  null,
-                    max_PH:  null,
-                    min_soil_moisture:  null,
-                    max_soil_moisture:  null,
-                    min_hum:  null,
-                    max_hum:  null,
-                },
-                stage_3: {
-                    stage_3_days: "",
-                    min_temp: "",
-                    max_temp: "",
-                    min_light: "",
-                    max_light: "",
-                    min_PH: "",
-                    max_PH: "",
-                    min_soil_moisture: "",
-                    max_soil_moisture: "",
-                    min_hum: "",
-                    max_hum: "",
-                },
-                stage_4: {
-                    stage_4_days: "",
-                    min_temp: "",
-                    max_temp: "",
-                    min_light: "",
-                    max_light: "",
-                    min_PH: "",
-                    max_PH: "",
-                    min_soil_moisture: "",
-                    max_soil_moisture: "",
-                    min_hum: "",
-                    max_hum: "",
-                }
             }
-        })
+        }))
     }
     componentDidMount() {
         const that = this;
@@ -337,6 +282,7 @@ class Project extends React.Component {
         const { seed, sub_id} = this.state;
         // console.log(this.state.listGateWay);
         console.log(this.state.temp.started_plant);
+        
         
         return (
             <React.Fragment>
