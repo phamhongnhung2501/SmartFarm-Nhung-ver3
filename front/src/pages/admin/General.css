@@ -1,0 +1,19 @@
+.admin__general__card .card-body .badge label:last-child{
+    color: orange;
+}
+.admin_image{
+    width: 10rem !important;
+    margin-left: 5.6rem !important;
+}
+.admin__general__card .card-body button{
+    width: 100%;
+}
+
+.admin__imgUpdate{
+    cursor: pointer;
+    margin:auto;
+    left: 0;
+    right: 0;
+    object-fit: cover;
+    object-position: center;
+}

@@ -1,0 +1,36 @@
+.div-album{
+    /* background-color: yellow; */
+    padding: 2rem;
+}
+.control__button{
+    margin-top: 1.2rem !important;
+    height: 2rem !important;
+}
+.control__item{
+    margin-left: 3.5rem;
+    width: 10rem !important;
+    height: 10rem !important;
+}
+.control__button-size{
+    padding-left: 3rem !important;
+}
+@media only screen and (min-device-width: 350px) 
+and (max-device-width: 600px){
+    .div-album{
+        padding-left: 0rem !important;
+        padding-right: 0rem !important;
+        padding-bottom: 6rem !important;
+    }
+    .control__button{
+        margin-top: 0rem !important;
+        margin-top: 0rem !important;
+    }
+    .control__button-size{
+        padding-left: 0.7rem !important;
+    }
+    .control__item{
+        margin-left: 0rem;
+        width: 3.8rem !important;
+        height: 3.8rem !important;
+    }
+}

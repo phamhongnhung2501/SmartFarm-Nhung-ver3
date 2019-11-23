@@ -1,0 +1,5 @@
+{
+  "key": "my_badass_secret_key_",
+  "algorithm": "SHA512",
+  "step": 6000
+}
