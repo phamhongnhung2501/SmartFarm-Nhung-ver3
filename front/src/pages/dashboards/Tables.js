@@ -261,7 +261,7 @@ class Tables extends React.Component {
                   striped
                   pagination={paginationFactory({
                     sizePerPage: 5,
-                    sizePerPageList: [5, 10, 25, 50]
+                    sizePerPageList: [5, 10, 15, 20]
                   })}
                   noDataIndication="Table is Empty"
                   hover

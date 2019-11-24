@@ -55,7 +55,7 @@ class StationInformation extends React.Component {
     return (
       <React.Fragment>
         <Tabs defaultActiveKey="info"  >
-          <Tab eventKey="info" title="Thông tin nông trại" >
+          <Tab eventKey="info" title="Thông tin vườn ươm" >
             <Card className="flex-fill w-100" style={{ height: 523, width: "100%" }}>
               <CardBody className="my-0">
                 <h3 className="text-center">{data.name}</h3>

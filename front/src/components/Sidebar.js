@@ -92,7 +92,7 @@ class Sidebar extends React.Component {
             <PerfectScrollbar>
               <a className="sidebar-brand" href="/">
                 <Box className="align-middle text-primary mr-2" size={24} />{" "}
-                <span className="align-middle">Nông Trại</span>
+                <span className="align-middle">Vườn Ươm</span>
               </a>
 
               <ul className="sidebar-nav">
