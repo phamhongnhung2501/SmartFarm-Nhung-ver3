@@ -260,8 +260,8 @@ class Tables extends React.Component {
                   condensed // responsive for table
                   striped
                   pagination={paginationFactory({
-                    sizePerPage: 5,
-                    sizePerPageList: [5, 10, 15, 20]
+                    sizePerPage: 3,
+                    sizePerPageList: [3, 6, 9]
                   })}
                   noDataIndication="Table is Empty"
                   hover
