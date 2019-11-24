@@ -36,23 +36,24 @@ class DateTimePicker extends React.Component {
         this.setState({ selectedDay: day });
         const data = {
             created_date: day,
-            manager: {
-            },
-            status: {
 
-            },
-            stage_1: {
+            // manager: {
+            // },
+            // status: {
 
-            },
-            stage_2: {
+            // },
+            // stage_1: {
 
-            },
-            stage_3: {
+            // },
+            // stage_2: {
 
-            },
-            stage_4: {
+            // },
+            // stage_3: {
 
-            }
+            // },
+            // stage_4: {
+
+            // }
         }
         this.props.handleChangeDate(data)
       }
@@ -115,9 +116,12 @@ class General extends React.Component {
     }
 
     handleChangeDate(data){
-        this.setState({
-            data: data
-        })
+        this.setState(prevState => ({
+            data: {
+                ...prevState.data,
+                created_date: data.created_date
+            }
+        }))
     }
     handleChange(event) {
         let data  = Object.assign({}, this.state.data, this.state.data.stage_1, this.state.data.stage_2, this.state.data.stage_3, this.state.data.stage_4);
@@ -155,7 +159,9 @@ class General extends React.Component {
             if (err) {
                 Notification("error", "Error", err.data === undefined ? err : err.status + ' ' + err.data._error_message)
             } else {
+                // --------sau khi thay doi va update ok
                 console.log(result);
+
                 localStorage.setItem('project', JSON.stringify(result));
                 Notification("success", "Edit Station", "Edit station is successfully");
             }
@@ -200,6 +206,10 @@ class General extends React.Component {
 
     render() {
         let {manager} = this.state.data;
+        console.log("render trong ham render--->created_date");
+        
+        console.log(this.state.data);
+        
         return (
             // !this.state.isLoaded ? null :
             <Card className="admin__general__card">
