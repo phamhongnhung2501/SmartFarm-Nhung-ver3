@@ -1286,11 +1286,12 @@ class Project extends React.Component {
                                         }
                                     )
                                 ) : (
-                                        <div className=" mt-6 station-loading bg-danger ">
-                                            <h1 className="text-center pt-3 text-white !important station__loading--text-size" >
-                                            Vui lòng đăng nhập trước khi vào trang Web
-                                            </h1>
-                                        </div>
+                                        // <div className=" mt-6 station-loading bg-danger ">
+                                        //     <h1 className="text-center pt-3 text-white !important station__loading--text-size" >
+                                        //     Vui lòng đăng nhập trước khi vào trang Web
+                                        //     </h1>
+                                        // </div>
+                                        <h1 className="text-center">Loading...</h1>
                                         
                                     )}
                             </Col>
