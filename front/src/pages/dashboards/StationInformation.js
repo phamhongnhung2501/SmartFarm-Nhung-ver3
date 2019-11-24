@@ -119,7 +119,7 @@ class StationInformation extends React.Component {
                 <ul className="list-unstyled mb-0">
                   <li className="mb-3">
                     <Home width={20} height={20} className="mr-1" /> Giai đoạn: {" "}
-                    <Link to="#">{data.status.name}</Link>
+                    <Link to="#">{data.status.name} Ươm hạt</Link>
                   </li>
                   <li className="mb-3">
                     <Briefcase width={20} height={20} className="mr-1" />Nhiệt độ: {" "}
