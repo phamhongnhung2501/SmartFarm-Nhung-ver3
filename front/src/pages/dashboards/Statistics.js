@@ -478,7 +478,7 @@ class Statistics extends React.Component {
                   <img src="https://image.flaticon.com/icons/svg/1779/1779817.svg " width={50} height={50} />
                 </div>
                 <h5 className="card-title mb-0 font-weight-bolder text__head--item">Độ ẩm không khí</h5>
-        
+                <div className="badge badge-success ml-4">%</div>
               </CardHeader>
               <CardBody className="border border-primary">
                 <Media>

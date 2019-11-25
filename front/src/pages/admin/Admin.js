@@ -18,6 +18,7 @@ import Notification from "../../components/Notification";
 import { CustomImg, LoadingSprinner } from "../../components/CustomTag";
 import { FormGroup, Input, Label } from "reactstrap";
 import moment from 'moment';
+import "./General.css";
 const api = require("./api/api");
 const ValidInput = require("../../utils/ValidInput");
 const utils = require("../../utils/utils");
@@ -139,8 +140,8 @@ class RowMember extends React.Component {
 						<td>
 							<CustomImg
 								src={this.props.infoMember.photo}
-								width="32"
-								height="32"
+								width="50"
+								height="50"
 								className="rounded-circle my-n1"
 								alt="Avatar"
 							/>
@@ -423,9 +424,9 @@ class Members extends React.Component {
 				<React.Fragment>
 
 					{/* End modal here */}
-					<Card>
+					<Card className="admin__member">
 						<CardHeader>
-							<Col xs="3" className="float-left d-inline">
+							<Col xs="4" className="float-left d-inline">
 								<Input type="search" id="inputSearchMemberproject" placeholder="Search from member infomation" onKeyUp={(event) => this.eventSearch(event)} />
 							</Col>
 						</CardHeader>

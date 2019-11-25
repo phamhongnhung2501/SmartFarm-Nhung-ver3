@@ -1,10 +1,10 @@
 .div-album{
-    /* background-color: yellow; */
     padding: 2rem;
 }
 .control__button{
-    margin-top: 1.2rem !important;
+    margin: 0 auto ;
     height: 2rem !important;
+    
 }
 .control__item{
     margin-left: 3.5rem;
@@ -12,7 +12,8 @@
     height: 10rem !important;
 }
 .control__button-size{
-    padding-left: 3rem !important;
+    text-align: center;
+    margin: 0 auto;
 }
 @media only screen and (min-device-width: 350px) 
 and (max-device-width: 600px){
@@ -26,7 +27,7 @@ and (max-device-width: 600px){
         margin-top: 0rem !important;
     }
     .control__button-size{
-        padding-left: 0.7rem !important;
+            text-align: center !important;
     }
     .control__item{
         margin-left: 0rem;

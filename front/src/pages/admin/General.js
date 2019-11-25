@@ -66,7 +66,7 @@ class DateTimePicker extends React.Component {
         return (
           <div>
             {selectedDay && <p>Day: {selectedDay.toLocaleDateString()}</p>}
-            {!selectedDay && <p>Thay đổi ngày gieo trồng</p>}
+            {!selectedDay && <p>Thay đổi ngày bắt đầu</p>}
             <DayPickerInput onDayChange={this.handleDayChange} />
           </div>
         );
@@ -244,13 +244,13 @@ class General extends React.Component {
                                 </Col>
                             </Row>
                             <Row>
-                                <Col>
+                                <Col xs="6">
                                     <FormGroup>
-                                        <Label for="name_of_address">Địa chỉ</Label>
+                                        <Label for="name_of_project">Tên cây Trồng</Label>
                                         <Input
-                                            type="text" name="address"
-                                            placeholder="Address station"
-                                            defaultValue={this.state.data.address}
+                                            type="text" name="seed"
+                                            placeholder="Tên cây trồng"
+                                            defaultValue={this.state.data.seed}
                                             onChange={this.handleChange}
                                             autoComplete="off"
                                         />
@@ -270,18 +270,21 @@ class General extends React.Component {
                                 </Col>
                             </Row>
                             <Row>
-                                <Col xs="6">
+                                <Col>
                                     <FormGroup>
-                                        <Label for="name_of_project">Cây Trồng</Label>
+                                        <Label for="name_of_address">Địa chỉ</Label>
                                         <Input
-                                            type="text" name="seed"
-                                            placeholder="Tên cây trồng"
-                                            defaultValue={this.state.data.seed}
+                                            type="text" name="address"
+                                            placeholder="Address station"
+                                            defaultValue={this.state.data.address}
                                             onChange={this.handleChange}
                                             autoComplete="off"
                                         />
                                     </FormGroup>
                                 </Col>
+                            </Row>
+                            
+                            <Row>
                                 <Col xs="6">
                                     <FormGroup>
                                         <DateTimePicker 
@@ -301,16 +304,16 @@ class General extends React.Component {
                         <Col md="4" className="mt-3">
                             <Row>
                             <img
-                                className="admin_image mb-4"
+                                className="admin_image mb-3"
                                 src= "https://making-the-web.com/sites/default/files/clipart/170069/agriculture-png-transparent-images-170069-7598577.png"
                             />
                             </Row>
                             <Row>
-                                <Col md="6">
+                                <Col md="6" className="admin__button-save">
                                     <Button type="button" color="primary" onClick={this.handleSaveChange.bind(this)}>Lưu thay đổi</Button>
                                 </Col>
-                                <Col md="6" className="pr-4">
-                                    <Button type="button" color="danger" onClick={this.toggle}>Xóa dự án</Button>
+                                <Col md="6" className="admin__button-save">
+                                    <Button type="button" color="danger" onClick={this.toggle}>Xóa vườn ươm</Button>
                                     <Modal isOpen={this.state.modal} toggle={this.toggle}>
                                         <ModalHeader>Confirm</ModalHeader>
                                         <ModalBody>Bạn có chắc chắn xóa trang trại này không?</ModalBody>
@@ -324,14 +327,15 @@ class General extends React.Component {
                            
                         </Col>
                     </Row>
-                    <Row>
-                        <Col xs="9">
-                        <Tabs defaultActiveKey="g1"  >
-                            <Tab eventKey="g1" title="Giai đoạn ươm hạt " >
+                    <div className="my-3">Các giai đoạn của cây: </div>
+                    <Row className="admin__digit">
+                        {/* <Col xs="12"> */}
+                        <Tabs defaultActiveKey="g1" >
+                            <Tab eventKey="g1" title="Ươm hạt " >
                                 <Card className="flex-fill w-100" style={{ height: 400, width: "100%" }}>
                                 <CardBody className="my-0">
                                     <Row>
-                                        <Col xs="3" > 
+                                        <Col xs="4" > 
                                             Tổng số ngày : 
                                         </Col>
                                         <Col xs="4" className="text-center station__stage-date"> 
@@ -345,7 +349,7 @@ class General extends React.Component {
                                         </Col>
                                     </Row>
                                     <Row>
-                                        <Col xs="3" className="mt-4">
+                                        <Col xs="4" className="mt-4">
                                             Nhiệt độ : 
                                         </Col>
                                         <Col xs="4" className="mt-4">
@@ -368,7 +372,7 @@ class General extends React.Component {
                                         </Col>
                                     </Row>
                                     <Row>
-                                        <Col xs="3" className="mt-4">
+                                        <Col xs="4" className="mt-4">
                                             Độ ẩm không khí : 
                                         </Col>
                                         <Col xs="4" className="mt-4">
@@ -391,7 +395,7 @@ class General extends React.Component {
                                         </Col>
                                     </Row>
                                     <Row>
-                                        <Col xs="3" className="mt-4">
+                                        <Col xs="4" className="mt-4">
                                             Độ ẩm đât : 
                                         </Col>
                                         <Col xs="4" className="mt-4">
@@ -414,7 +418,7 @@ class General extends React.Component {
                                         </Col>
                                     </Row>
                                     <Row>
-                                        <Col xs="3" className="mt-4">
+                                        <Col xs="4" className="mt-4">
                                             Ánh sáng : 
                                         </Col>
                                         <Col xs="4" className="mt-4">
@@ -437,7 +441,7 @@ class General extends React.Component {
                                         </Col>
                                     </Row>
                                     <Row>
-                                        <Col xs="3" className="mt-4">
+                                        <Col xs="4" className="mt-4">
                                             PH : 
                                         </Col>
                                         <Col xs="4" className="mt-4">
@@ -462,11 +466,11 @@ class General extends React.Component {
                                 </CardBody>
                                 </Card>
                             </Tab>
-                            <Tab eventKey="g2" title="Giai đoạn ra hoa">
+                            <Tab eventKey="g2" title="Ra hoa">
                                 <Card className="flex-fill w-100" style={{ height: 400, width: "100%" }}>
                                 <CardBody className="my-0">
                                     <Row>
-                                        <Col xs="3" > 
+                                        <Col xs="4" > 
                                             Tổng số ngày : 
                                         </Col>
                                         <Col xs="4" className="text-center station__stage-date"> 
@@ -480,7 +484,7 @@ class General extends React.Component {
                                         </Col>
                                     </Row>
                                     <Row>
-                                        <Col xs="3" className="mt-4">
+                                        <Col xs="4" className="mt-4">
                                             Nhiệt độ : 
                                         </Col>
                                         <Col xs="4" className="mt-4">
@@ -503,7 +507,7 @@ class General extends React.Component {
                                         </Col>
                                     </Row>
                                     <Row>
-                                        <Col xs="3" className="mt-4">
+                                        <Col xs="4" className="mt-4">
                                             Độ ẩm không khí : 
                                         </Col>
                                         <Col xs="4" className="mt-4">
@@ -526,7 +530,7 @@ class General extends React.Component {
                                         </Col>
                                     </Row>
                                     <Row>
-                                        <Col xs="3" className="mt-4">
+                                        <Col xs="4" className="mt-4">
                                             Độ ẩm đât : 
                                         </Col>
                                         <Col xs="4" className="mt-4">
@@ -549,7 +553,7 @@ class General extends React.Component {
                                         </Col>
                                     </Row>
                                     <Row>
-                                        <Col xs="3" className="mt-4">
+                                        <Col xs="4" className="mt-4">
                                             Ánh sáng : 
                                         </Col>
                                         <Col xs="4" className="mt-4">
@@ -572,7 +576,7 @@ class General extends React.Component {
                                         </Col>
                                     </Row>
                                     <Row>
-                                        <Col xs="3" className="mt-4">
+                                        <Col xs="4" className="mt-4">
                                             PH : 
                                         </Col>
                                         <Col xs="4" className="mt-4">
@@ -597,11 +601,11 @@ class General extends React.Component {
                                 </CardBody>
                                 </Card>
                             </Tab>
-                            <Tab eventKey="g3" title="Giai đoạn phát triển">
+                            <Tab eventKey="g3" title="Phát triển">
                                 <Card className="flex-fill w-100" style={{ height: 400, width: "100%" }}>
                                 <CardBody className="my-0">
                                     <Row>
-                                        <Col xs="3" > 
+                                        <Col xs="4" > 
                                             Tổng số ngày : 
                                         </Col>
                                         <Col xs="4" className="text-center station__stage-date"> 
@@ -615,7 +619,7 @@ class General extends React.Component {
                                         </Col>
                                     </Row>
                                     <Row>
-                                        <Col xs="3" className="mt-4">
+                                        <Col xs="4" className="mt-4">
                                             Nhiệt độ : 
                                         </Col>
                                         <Col xs="4" className="mt-4">
@@ -638,7 +642,7 @@ class General extends React.Component {
                                         </Col>
                                     </Row>
                                     <Row>
-                                        <Col xs="3" className="mt-4">
+                                        <Col xs="4" className="mt-4">
                                             Độ ẩm không khí : 
                                         </Col>
                                         <Col xs="4" className="mt-4">
@@ -661,7 +665,7 @@ class General extends React.Component {
                                         </Col>
                                     </Row>
                                     <Row>
-                                        <Col xs="3" className="mt-4">
+                                        <Col xs="4" className="mt-4">
                                             Độ ẩm đât : 
                                         </Col>
                                         <Col xs="4" className="mt-4">
@@ -684,7 +688,7 @@ class General extends React.Component {
                                         </Col>
                                     </Row>
                                     <Row>
-                                        <Col xs="3" className="mt-4">
+                                        <Col xs="4" className="mt-4">
                                             Ánh sáng : 
                                         </Col>
                                         <Col xs="4" className="mt-4">
@@ -707,7 +711,7 @@ class General extends React.Component {
                                         </Col>
                                     </Row>
                                     <Row>
-                                        <Col xs="3" className="mt-4">
+                                        <Col xs="4" className="mt-4">
                                             PH : 
                                         </Col>
                                         <Col xs="4" className="mt-4">
@@ -732,11 +736,11 @@ class General extends React.Component {
                                 </CardBody>
                                 </Card>
                             </Tab>
-                            <Tab eventKey="g4" title="Giai đoạn thu hoạch">
+                            <Tab eventKey="g4" title="Thu hoạch">
                                 <Card className="flex-fill w-100" style={{ height: 400, width: "100%" }}>
                                 <CardBody className="my-0">
                                     <Row>
-                                        <Col xs="3" > 
+                                        <Col xs="4" > 
                                             Tổng số ngày : 
                                         </Col>
                                         <Col xs="4" className="text-center station__stage-date"> 
@@ -750,7 +754,7 @@ class General extends React.Component {
                                         </Col>
                                     </Row>
                                     <Row>
-                                        <Col xs="3" className="mt-4">
+                                        <Col xs="4" className="mt-4">
                                             Nhiệt độ : 
                                         </Col>
                                         <Col xs="4" className="mt-4">
@@ -773,7 +777,7 @@ class General extends React.Component {
                                         </Col>
                                     </Row>
                                     <Row>
-                                        <Col xs="3" className="mt-4">
+                                        <Col xs="4" className="mt-4">
                                             Độ ẩm không khí : 
                                         </Col>
                                         <Col xs="4" className="mt-4">
@@ -796,7 +800,7 @@ class General extends React.Component {
                                         </Col>
                                     </Row>
                                     <Row>
-                                        <Col xs="3" className="mt-4">
+                                        <Col xs="4" className="mt-4">
                                             Độ ẩm đât : 
                                         </Col>
                                         <Col xs="4" className="mt-4">
@@ -819,7 +823,7 @@ class General extends React.Component {
                                         </Col>
                                     </Row>
                                     <Row>
-                                        <Col xs="3" className="mt-4">
+                                        <Col xs="4" className="mt-4">
                                             Ánh sáng : 
                                         </Col>
                                         <Col xs="4" className="mt-4">
@@ -842,7 +846,7 @@ class General extends React.Component {
                                         </Col>
                                     </Row>
                                     <Row>
-                                        <Col xs="3" className="mt-4">
+                                        <Col xs="4" className="mt-4">
                                             PH : 
                                         </Col>
                                         <Col xs="4" className="mt-4">
@@ -868,25 +872,8 @@ class General extends React.Component {
                                 </Card>
                             </Tab>
                         </Tabs>
-                        </Col>
+                        {/* </Col> */}
                     </Row>
-                    {/* <Row>
-                        <Col md="8"></Col>
-                        <Col md="2">
-                            <Button type="button" color="primary" onClick={this.handleSaveChange.bind(this)}>Lưu thay đổi</Button>
-                        </Col>
-                        <Col md="2" className="pr-4">
-                            <Button type="button" color="danger" onClick={this.toggle}>Xóa trang trại</Button>
-                            <Modal isOpen={this.state.modal} toggle={this.toggle}>
-                                <ModalHeader>Confirm</ModalHeader>
-                                <ModalBody>Bạn có chắc chắn xóa trang trại này không?</ModalBody>
-                                <ModalFooter>
-                                    <Button color="secondary" onClick={this.toggle}>Xóa</Button>
-                                    <Button color="success" onClick={this.handleDelProject.bind(this)}>Đống ý</Button>
-                                </ModalFooter>
-                            </Modal>
-                        </Col>
-                    </Row> */}
                 </CardBody>
             </Card>
         )

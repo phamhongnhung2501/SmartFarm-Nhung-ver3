@@ -56,7 +56,7 @@ class AlbumImage extends Component {
                 </Row>
                 <Row className="mt-2">
                     <Col xs="4" className="control__button-size">
-                        <Button className="control__button bg-success mr-1 !important"
+                        <Button className="control__button bg-success  !important"
                             onClick={() => {
                                 this.setState({ t: this.state.t == 1 ? 1 : this.state.t + 1 });
                                 send("00");
@@ -74,7 +74,7 @@ class AlbumImage extends Component {
                         </Button>
                     </Col>
                     <Col xs="4" className="control__button-size">
-                        <Button className="control__button bg-success mr-1 !important"
+                        <Button className="control__button bg-success !important"
                             onClick={() => {
                                 this.setState({ p: this.state.p == 1 ? 1 : this.state.p + 1 });
                                 send("10");
@@ -92,7 +92,7 @@ class AlbumImage extends Component {
                         </Button>
                     </Col>
                     <Col xs="4" className="control__button-size">
-                        <Button className="control__button bg-success mr-1 !important"
+                        <Button className="control__button bg-success  !important"
                             onClick={() => {
                                 this.setState({ f: this.state.f == 1 ? 1 : this.state.f + 1 });
                                 send("20");
@@ -106,6 +106,7 @@ class AlbumImage extends Component {
                                 send("21");
                             }}
                         >
+            
                             Bật quạt
                         </Button>
                     </Col>

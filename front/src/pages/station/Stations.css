@@ -131,6 +131,10 @@
     text-align: center !important;
     border-radius: 1rem ;
 }
+.station__digital{
+    width: 100% !important;
+    height: 18.5rem !important;
+}
 @media only screen and (min-device-width: 300px) 
 and (max-device-width: 812px){
     .table-project{
@@ -161,6 +165,10 @@ and (max-device-width: 812px){
     }
     .station-loading{
         margin-top: 2rem !important;
+    }
+    .station__digital{
+        width: 100% !important;
+        height: 13rem !important;
     }
 }
 

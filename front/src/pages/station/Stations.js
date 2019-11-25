@@ -57,7 +57,7 @@ class DateTimePicker extends React.Component {
         return (
           <div>
             {selectedDay && <p>Day: {selectedDay.toLocaleDateString()}</p>}
-            {!selectedDay && <p>Ngày bắt đầu gieo trồng</p>}
+            {!selectedDay && <p>Ngày bắt đầu: </p>}
             <DayPickerInput onDayChange={this.handleDayChange} />
           </div>
         );
@@ -299,8 +299,21 @@ class Project extends React.Component {
                         <FormGroup>
                             <Row>
                                 <Col xs="6">
+                                    <Label for="name_of_project">Tên vườn ươm</Label>
+                                    <Input
+                                        type="text"
+                                        name="name"
+                                        placeholder="Tên trạm"
+                                        value={this.state.temp.name}
+                                        onChange={this.handleChange}
+                                        invalid={
+                                            this.state.submitted && !this.state.temp.name ? true : false
+                                        }
+                                    />
+                                    <FormFeedback invalid>
+                                        Tên vườn ươm là một trường bắt buộc!
+                                    </FormFeedback>
                                    
-                                    <DateTimePicker handleDate={this.handleDate} />
                                 </Col>
                                 <Col xs="6" >
                                 <Label>Gateway</Label>
@@ -328,21 +341,7 @@ class Project extends React.Component {
                         <FormGroup>
                             <Row>
                                 <Col xs="6">
-                                    <Label for="name_of_project">Tên vườn ươm</Label>
-                                    <Input
-                                        type="text"
-                                        name="name"
-                                        placeholder="Tên trạm"
-                                        value={this.state.temp.name}
-                                        onChange={this.handleChange}
-                                        invalid={
-                                            this.state.submitted && !this.state.temp.name ? true : false
-                                        }
-                                    />
-                                    <FormFeedback invalid>
-                                        Tên vườn ươm là một trường bắt buộc!
-                                    </FormFeedback>
-                                   
+                                <DateTimePicker handleDate={this.handleDate} />
                                 </Col>
                                 <Col xs="6">
                                     <Label>Giống cây trồng</Label>
@@ -379,10 +378,10 @@ class Project extends React.Component {
                                 
                             </Input>
                         </FormGroup> */}
-                       
+                       <div>Các giai đoạn của cây : </div> 
                         <Tabs defaultActiveKey="g1"  >
-                            <Tab eventKey="g1" title="Giai đoạn ươm hạt " >
-                                <Card className="flex-fill w-100" style={{ height: 400, width: "100%" }}>
+                            <Tab eventKey="g1" title="Ươm hạt" >
+                                <Card className="flex-fill w-100" style={{ height: 410, width: "100%" }}>
                                 <CardBody className="my-0">
                                     <Row>
                                         <Col xs="3" > 
@@ -582,7 +581,7 @@ class Project extends React.Component {
                                 </CardBody>
                                 </Card>
                             </Tab>
-                            <Tab eventKey="g2" title="Giai đoạn ra hoa">
+                            <Tab eventKey="g2" title="Ra hoa">
                                 <Card className="flex-fill w-100" style={{ height: 400, width: "100%" }}>
                                 <CardBody className="my-0">
                                     <Row>
@@ -783,7 +782,7 @@ class Project extends React.Component {
                                 </CardBody>
                                 </Card>
                             </Tab>
-                            <Tab eventKey="g3" title="Giai đoạn phát triển">
+                            <Tab eventKey="g3" title="Phát triển">
                                 <Card className="flex-fill w-100" style={{ height: 400, width: "100%" }}>
                                 <CardBody className="my-0">
                                     <Row>
@@ -984,7 +983,7 @@ class Project extends React.Component {
                                 </CardBody>
                                 </Card>
                             </Tab>
-                            <Tab eventKey="g4" title="Giai đoạn thu hoạch">
+                            <Tab eventKey="g4" title="Thu hoạch">
                                 <Card className="flex-fill w-100" style={{ height: 400, width: "100%" }}>
                                 <CardBody className="my-0">
                                     <Row>
