@@ -60,6 +60,8 @@ class ProfDetails extends Component {
                         Notification("error", "Error", err.data === undefined ? err : err.status + ' ' + err.data._error_message)
                     }
                     else {
+                        console.log(result);
+                        
                         this.setState({
                             fullname: changeFullname,
                             gender: changeGender,
@@ -189,25 +191,6 @@ class ProfDetails extends Component {
                             <Input disabled type="text" id="email" name="changeEmail" defaultValue={this.state.email} />
                         </FormGroup>
 
-
-                        <FormGroup>
-                            <Label for="gender"><h5><dt>Giới tính</dt></h5></Label>
-                            <Input type="select" id="gender" name="changeGender" defaultValue={this.state.gender} onChange={this.handleChangeValue}>
-                                <option>Nam</option>
-                                <option>Nữ</option>
-                                <option>Không biết</option>
-                            </Input>
-                        </FormGroup>
-
-                        {/* <FormGroup>
-                            <Label for="phone_number"><h5><dt>Mobile</dt></h5></Label>
-                            <Input type="tel" id="phone_number" name="changePhone_number" defaultValue={this.state.phone_number} onChange={this.handleChangeValue} />
-                        </FormGroup> */}
-{/* 
-                        <FormGroup>
-                            <Label for="address"><h5><dt>Địa chỉ</dt></h5></Label>
-                            <Input type="text" id="address" name="changeAddress" defaultValue={this.state.address} onChange={this.handleChangeValue} />
-                        </FormGroup> */}
                     </ModalBody>
                     <ModalFooter>
                         <Button type="button" className="mr-2" color="primary" onClick={this.updateUser.bind(this)}>Lưu</Button>
@@ -237,12 +220,6 @@ class ProfDetails extends Component {
                         <div>
                             <li className="mb-1">
                                 <Mail width={14} height={14} className="mr-1" /> Email: {" "} {this.props.email !== null ? this.state.email : <i className="Profile__font-size-078rem">Đang cập nhật</i>}
-                            </li>
-                        </div>
-
-                        <div>
-                            <li className="mb-1">
-                                <User width={14} height={14} className="mr-1" /> Giới tính: {" "} {this.props.gender !== null ? this.state.gender : <i className="Profile__font-size-078rem">Đang cập nhật</i>}
                             </li>
                         </div>
 

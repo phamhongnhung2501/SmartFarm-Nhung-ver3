@@ -153,9 +153,9 @@ class ActContact extends Component {
                       <Media>
                         <strong>Họ & tên: {data.email}</strong>
                       </Media>
-                      <Media>
+                      {/* <Media>
                         <strong>Giới tính: {data.gender}</strong>
-                      </Media>
+                      </Media> */}
                       <Media>
                         <strong>Ngày tạo: {moment(data.date_joined).format('DD/MM/YYYY h:mm:ss a')}</strong>
                       </Media>

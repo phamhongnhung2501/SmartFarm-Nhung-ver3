@@ -377,7 +377,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4">
                                             <Input
-                                                type="number" name="min_hum"                                            
+                                                type="number" name="stage_1.min_hum"                                            
                                                 placeholder="nhỏ nhất"
                                                 defaultValue={this.state.data.stage_1.min_hum}
                                                 onChange={this.handleChange}
@@ -386,7 +386,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4"> 
                                             <Input
-                                                type="number" name="max_hum"                                            
+                                                type="number" name="stage_1.max_hum"                                            
                                                 placeholder="lớn nhất"
                                                 defaultValue={this.state.data.stage_1.max_hum}
                                                 onChange={this.handleChange}
@@ -400,7 +400,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4">
                                             <Input
-                                                type="number" name="min_soil_moisture"                                            
+                                                type="number" name="stage_1.min_soil_moisture"                                            
                                                 placeholder="nhỏ nhất"
                                                 defaultValue={this.state.data.stage_1.min_soil_moisture}
                                                 onChange={this.handleChange}
@@ -409,7 +409,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4"> 
                                             <Input
-                                                type="number" name="max_soil_moisture"                                            
+                                                type="number" name="stage_1.max_soil_moisture"                                            
                                                 placeholder="lớn nhất"
                                                 defaultValue={this.state.data.stage_1.max_soil_moisture}
                                                 onChange={this.handleChange}
@@ -423,7 +423,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4">
                                             <Input
-                                                type="number" name="min_light"                                            
+                                                type="number" name="stage_1.min_light"                                            
                                                 placeholder="nhỏ nhất"
                                                 defaultValue={this.state.data.stage_1.min_light}
                                                 onChange={this.handleChange}
@@ -432,7 +432,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4"> 
                                             <Input
-                                                type="number" name="max_light"                                            
+                                                type="number" name="stage_1.max_light"                                            
                                                 placeholder="lớn nhất"
                                                 defaultValue={this.state.data.stage_1.max_light}
                                                 onChange={this.handleChange}
@@ -446,7 +446,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4">
                                             <Input
-                                                type="number" name="min_PH"                                            
+                                                type="number" name="stage_1.min_PH"                                            
                                                 placeholder="nhỏ nhất"
                                                 defaultValue={this.state.data.stage_1.min_PH}
                                                 onChange={this.handleChange}
@@ -455,7 +455,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4"> 
                                             <Input
-                                                type="number" name="max_PH"                                            
+                                                type="number" name="stage_1.max_PH"                                            
                                                 placeholder="lớn nhất"
                                                 defaultValue={this.state.data.stage_1.max_PH}
                                                 onChange={this.handleChange}
@@ -475,7 +475,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="text-center station__stage-date"> 
                                             <Input
-                                                type="number" name="stage_days"                                            
+                                                type="number" name="stage_2.stage_days"                                            
                                                 placeholder="Nhập tổng số ngày trồng"
                                                 defaultValue={this.state.data.stage_2.stage_days}
                                                 onChange={this.handleChange}
@@ -489,7 +489,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4">
                                             <Input
-                                                type="number" name="min_temp"                                            
+                                                type="number" name="stage_2.min_temp"                                            
                                                 placeholder="nhỏ nhất"
                                                 defaultValue={this.state.data.stage_2.min_temp}
                                                 onChange={this.handleChange}
@@ -498,7 +498,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4"> 
                                             <Input
-                                                type="number" name="max_temp"                                            
+                                                type="number" name="stage_2.max_temp"                                            
                                                 placeholder="lớn nhất"
                                                 defaultValue={this.state.data.stage_2.max_temp}
                                                 onChange={this.handleChange}
@@ -512,7 +512,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4">
                                             <Input
-                                                type="number" name="min_hum"                                            
+                                                type="number" name="stage_2.min_hum"                                            
                                                 placeholder="nhỏ nhất"
                                                 defaultValue={this.state.data.stage_2.min_hum}
                                                 onChange={this.handleChange}
@@ -521,7 +521,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4"> 
                                             <Input
-                                                type="number" name="max_hum"                                            
+                                                type="number" name="stage_2.max_hum"                                            
                                                 placeholder="lớn nhất"
                                                 defaultValue={this.state.data.stage_2.max_hum}
                                                 onChange={this.handleChange}
@@ -535,7 +535,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4">
                                             <Input
-                                                type="number" name="min_soil_moisture"                                            
+                                                type="number" name="stage_2.min_soil_moisture"                                            
                                                 placeholder="nhỏ nhất"
                                                 defaultValue={this.state.data.stage_2.min_soil_moisture}
                                                 onChange={this.handleChange}
@@ -544,7 +544,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4"> 
                                             <Input
-                                                type="number" name="max_soil_moisture"                                            
+                                                type="number" name="stage_2.max_soil_moisture"                                            
                                                 placeholder="lớn nhất"
                                                 defaultValue={this.state.data.stage_2.max_soil_moisture}
                                                 onChange={this.handleChange}
@@ -558,7 +558,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4">
                                             <Input
-                                                type="number" name="min_light"                                            
+                                                type="number" name="stage_2.min_light"                                            
                                                 placeholder="nhỏ nhất"
                                                 defaultValue={this.state.data.stage_2.min_light}
                                                 onChange={this.handleChange}
@@ -567,7 +567,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4"> 
                                             <Input
-                                                type="number" name="max_light"                                            
+                                                type="number" name="stage_2.max_light"                                            
                                                 placeholder="lớn nhất"
                                                 defaultValue={this.state.data.stage_2.max_light}
                                                 onChange={this.handleChange}
@@ -581,7 +581,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4">
                                             <Input
-                                                type="number" name="min_PH"                                            
+                                                type="number" name="stage_2.min_PH"                                            
                                                 placeholder="nhỏ nhất"
                                                 defaultValue={this.state.data.stage_2.min_PH}
                                                 onChange={this.handleChange}
@@ -590,7 +590,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4"> 
                                             <Input
-                                                type="number" name="max_PH"                                            
+                                                type="number" name="stage_2.max_PH"                                            
                                                 placeholder="lớn nhất"
                                                 defaultValue={this.state.data.stage_2.max_PH}
                                                 onChange={this.handleChange}
@@ -610,7 +610,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="text-center station__stage-date"> 
                                             <Input
-                                                type="number" name="stage_days"                                            
+                                                type="number" name="stage_3.stage_days"                                            
                                                 placeholder="Nhập tổng số ngày trồng"
                                                 defaultValue={this.state.data.stage_3.stage_days}
                                                 onChange={this.handleChange}
@@ -624,7 +624,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4">
                                             <Input
-                                                type="number" name="min_temp"                                            
+                                                type="number" name="stage_3.min_temp"                                            
                                                 placeholder="nhỏ nhất"
                                                 defaultValue={this.state.data.stage_3.min_temp}
                                                 onChange={this.handleChange}
@@ -633,7 +633,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4"> 
                                             <Input
-                                                type="number" name="max_temp"                                            
+                                                type="number" name="stage_3.max_temp"                                            
                                                 placeholder="lớn nhất"
                                                 defaultValue={this.state.data.stage_3.max_temp}
                                                 onChange={this.handleChange}
@@ -647,7 +647,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4">
                                             <Input
-                                                type="number" name="min_hum"                                            
+                                                type="number" name="stage_3.min_hum"                                            
                                                 placeholder="nhỏ nhất"
                                                 defaultValue={this.state.data.stage_3.min_hum}
                                                 onChange={this.handleChange}
@@ -656,7 +656,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4"> 
                                             <Input
-                                                type="number" name="max_hum"                                            
+                                                type="number" name="stage_3.max_hum"                                            
                                                 placeholder="lớn nhất"
                                                 defaultValue={this.state.data.stage_3.max_hum}
                                                 onChange={this.handleChange}
@@ -670,7 +670,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4">
                                             <Input
-                                                type="number" name="min_soil_moisture"                                            
+                                                type="number" name="stage_3.min_soil_moisture"                                            
                                                 placeholder="nhỏ nhất"
                                                 defaultValue={this.state.data.stage_3.min_soil_moisture}
                                                 onChange={this.handleChange}
@@ -679,7 +679,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4"> 
                                             <Input
-                                                type="number" name="max_soil_moisture"                                            
+                                                type="number" name="stage_3.max_soil_moisture"                                            
                                                 placeholder="lớn nhất"
                                                 defaultValue={this.state.data.stage_3.max_soil_moisture}
                                                 onChange={this.handleChange}
@@ -693,7 +693,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4">
                                             <Input
-                                                type="number" name="min_light"                                            
+                                                type="number" name="stage_3.min_light"                                            
                                                 placeholder="nhỏ nhất"
                                                 defaultValue={this.state.data.stage_3.min_light}
                                                 onChange={this.handleChange}
@@ -702,7 +702,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4"> 
                                             <Input
-                                                type="number" name="max_light"                                            
+                                                type="number" name="stage_3.max_light"                                            
                                                 placeholder="lớn nhất"
                                                 defaultValue={this.state.data.stage_3.max_light}
                                                 onChange={this.handleChange}
@@ -716,7 +716,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4">
                                             <Input
-                                                type="number" name="min_PH"                                            
+                                                type="number" name="stage_3.min_PH"                                            
                                                 placeholder="nhỏ nhất"
                                                 defaultValue={this.state.data.stage_3.min_PH}
                                                 onChange={this.handleChange}
@@ -725,7 +725,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4"> 
                                             <Input
-                                                type="number" name="max_PH"                                            
+                                                type="number" name="stage_3.max_PH"                                            
                                                 placeholder="lớn nhất"
                                                 defaultValue={this.state.data.stage_3.max_PH}
                                                 onChange={this.handleChange}
@@ -745,7 +745,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="text-center station__stage-date"> 
                                             <Input
-                                                type="number" name="stage_days"                                            
+                                                type="number" name="stage_4.stage_days"                                            
                                                 placeholder="Nhập tổng số ngày trồng"
                                                 defaultValue={this.state.data.stage_4.stage_days}
                                                 onChange={this.handleChange}
@@ -759,7 +759,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4">
                                             <Input
-                                                type="number" name="min_temp"                                            
+                                                type="number" name="stage_4.min_temp"                                            
                                                 placeholder="nhỏ nhất"
                                                 defaultValue={this.state.data.stage_4.min_temp}
                                                 onChange={this.handleChange}
@@ -768,7 +768,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4"> 
                                             <Input
-                                                type="number" name="max_temp"                                            
+                                                type="number" name="stage_4.max_temp"                                            
                                                 placeholder="lớn nhất"
                                                 defaultValue={this.state.data.stage_4.max_temp}
                                                 onChange={this.handleChange}
@@ -782,7 +782,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4">
                                             <Input
-                                                type="number" name="min_hum"                                            
+                                                type="number" name="stage_4.min_hum"                                            
                                                 placeholder="nhỏ nhất"
                                                 defaultValue={this.state.data.stage_4.min_hum}
                                                 onChange={this.handleChange}
@@ -791,7 +791,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4"> 
                                             <Input
-                                                type="number" name="max_hum"                                            
+                                                type="number" name="stage_4.max_hum"                                            
                                                 placeholder="lớn nhất"
                                                 defaultValue={this.state.data.stage_4.max_hum}
                                                 onChange={this.handleChange}
@@ -805,7 +805,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4">
                                             <Input
-                                                type="number" name="min_soil_moisture"                                            
+                                                type="number" name="stage_4.min_soil_moisture"                                            
                                                 placeholder="nhỏ nhất"
                                                 defaultValue={this.state.data.stage_4.min_soil_moisture}
                                                 onChange={this.handleChange}
@@ -814,7 +814,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4"> 
                                             <Input
-                                                type="number" name="max_soil_moisture"                                            
+                                                type="number" name="stage_4.max_soil_moisture"                                            
                                                 placeholder="lớn nhất"
                                                 defaultValue={this.state.data.stage_4.max_soil_moisture}
                                                 onChange={this.handleChange}
@@ -828,7 +828,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4">
                                             <Input
-                                                type="number" name="min_light"                                            
+                                                type="number" name="stage_4.min_light"                                            
                                                 placeholder="nhỏ nhất"
                                                 defaultValue={this.state.data.stage_4.min_light}
                                                 onChange={this.handleChange}
@@ -837,7 +837,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4"> 
                                             <Input
-                                                type="number" name="max_light"                                            
+                                                type="number" name="stage_4.max_light"                                            
                                                 placeholder="lớn nhất"
                                                 defaultValue={this.state.data.stage_4.max_light}
                                                 onChange={this.handleChange}
@@ -851,7 +851,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4">
                                             <Input
-                                                type="number" name="min_PH"                                            
+                                                type="number" name="stage_4.min_PH"                                            
                                                 placeholder="nhỏ nhất"
                                                 defaultValue={this.state.data.stage_4.min_PH}
                                                 onChange={this.handleChange}
@@ -860,7 +860,7 @@ class General extends React.Component {
                                         </Col>
                                         <Col xs="4" className="mt-4"> 
                                             <Input
-                                                type="number" name="max_PH"                                            
+                                                type="number" name="stage_4.max_PH"                                            
                                                 placeholder="lớn nhất"
                                                 defaultValue={this.state.data.stage_4.max_PH}
                                                 onChange={this.handleChange}
