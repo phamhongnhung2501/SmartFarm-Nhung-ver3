@@ -107,13 +107,13 @@ class VerifyAccount extends Component {
                                         />
                                     </div>
                                     <div className="h3 text-primary text-center">Welcome To Your Smart Farm!</div>
-                                    <div className="text-center">Thank you for joining! Please click the button below to verify your account.</div>
+                                    <div className="text-center">Cảm ơn bạn đã đăng ký! Vui lòng nhập mã xác thực vào phần phía dưới.</div>
                                     <Row>
                                         {/* <Col xs="4" className="mt-5" > */}
 
                                         {/* </Col> */}
                                         <Col className="verify__phone-number float-center">
-                                            <Label for="name_of_manager" className="text-danger ml-2">*Verification code</Label>
+                                            <Label for="name_of_manager" className="text-danger ml-2">*Nhập mã xác thực: </Label>
                                             <Form onSubmit={this.handleSubmit}>
                                                 <FormGroup >
                                                     <Input
@@ -126,12 +126,10 @@ class VerifyAccount extends Component {
                                                         placeholder="Your code"
                                                         invalid={submitted && this.validateCode(this.state.code) ? true : false}
                                                     />
-                                                    {/* <FormFeedback invalid>
-                                                        Code is a required field to you can create a successful account!
-                                                    </FormFeedback> */}
+
                                                     {!code &&
                                                         <FormFeedback invalid>
-                                                            Code is a required field to you can create a successful account!
+                                                            Bạn cần nhập đúng phần mã xác thực này để tạo tài khoản thành công!
                                                         </FormFeedback>
                                                     }
                                                     {code && (!/(?=^.{6,}$).*$/i.test(code)) &&
@@ -148,7 +146,7 @@ class VerifyAccount extends Component {
                                                             size="mb-3 mt-1 "
                                                             className="btn btn-block text-capitalize mt-2"
                                                         >
-                                                            Verify Account
+                                                            Mã xác thực
                                                         </Button>
                                                         :
                                                         <LoadingSprinner />
