@@ -89,7 +89,7 @@ class SignIn extends React.Component {
                                             className="img--user--square-7x mb-2"
                                         />
                                     </div>
-                                    <h1 className="text-center signin-text-fwork">Nông trại thông minh</h1>
+                                    <h1 className="text-center signin-text-fwork">Smart Farm</h1>
                                     <Form onSubmit={this.handleSubmit}>
                                         <FormGroup>
                                             <Input
