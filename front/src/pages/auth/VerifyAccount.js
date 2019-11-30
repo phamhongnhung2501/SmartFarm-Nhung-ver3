@@ -106,7 +106,7 @@ class VerifyAccount extends Component {
                                             className="img--user--square-7x mr-4 mb-2"
                                         />
                                     </div>
-                                    <div className="h3 text-primary text-center">Cảm ơn bạn đã đăng ký! Vui lòng nhập mã xác thực vào phần phía dưới để tạo tài khoản thành công!</div>
+                                    <div className="h3 text-primary text-center">Cảm ơn bạn đã đăng ký! Vui lòng nhập mã xác thực để tạo tài khoản thành công!</div>
                                     {/* <div className="text-center"></div> */}
                                     <Row>
                                         {/* <Col xs="4" className="mt-5" > */}
