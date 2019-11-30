@@ -106,7 +106,7 @@ class VerifyAccount extends Component {
                                             className="img--user--square-7x mr-4 mb-2"
                                         />
                                     </div>
-                                    <div className="h3 text-primary text-center">Welcome To Your Smart Farm!</div>
+                                    <div className="h3 text-primary text-center">Chào đón bạn đến với phần mềm quản lý nông trại thông minh!</div>
                                     <div className="text-center">Cảm ơn bạn đã đăng ký! Vui lòng nhập mã xác thực vào phần phía dưới.</div>
                                     <Row>
                                         {/* <Col xs="4" className="mt-5" > */}
@@ -123,7 +123,7 @@ class VerifyAccount extends Component {
                                                         onChange={this.handleChange}
                                                         value={this.state.code}
                                                         onChange={this.handleChange}
-                                                        placeholder="Your code"
+                                                        placeholder="Nhập mã xác thực"
                                                         invalid={submitted && this.validateCode(this.state.code) ? true : false}
                                                     />
 
