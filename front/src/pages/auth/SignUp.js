@@ -154,7 +154,7 @@ class SignUp extends React.Component {
                                         name="full_name"
                                         value={this.state.full_name}
                                         onChange={this.handleChange}
-                                        placeholder="tên đầy đủ"
+                                        placeholder="Tên đầy đủ"
                                         invalid={submitted && !full_name ? true : false}
                                     />
                                     <FormFeedback invalid>
@@ -169,7 +169,7 @@ class SignUp extends React.Component {
                                         name="password"
                                         value={this.state.password}
                                         onChange={this.handleChange}
-                                        placeholder="mật khẩu"
+                                        placeholder="Mật khẩu"
                                         invalid={submitted && this.validatePassword(this.state.password) ? true : false}
                                     />
                                     {!password &&
@@ -192,7 +192,7 @@ class SignUp extends React.Component {
                                         name="confirm_password"
                                         value={this.state.confirm_password}
                                         onChange={this.handleChange}
-                                        placeholder="xác thực mật khẩu"
+                                        placeholder="Xác thực mật khẩu"
                                         invalid={submitted && password !== confirm_password ? true : false}
                                     />
                                     <FormFeedback invalid>
@@ -207,7 +207,7 @@ class SignUp extends React.Component {
                                         name="phone_number"
                                         value={this.state.phone_number}
                                         onChange={this.handleChange}
-                                        placeholder="số điện thoại"
+                                        placeholder="Số điện thoại"
                                         invalid={submitted && this.validatePhoneNumber(this.state.phone_number) ? true : false}
                                     />
                                     {!phone_number &&
@@ -227,7 +227,7 @@ class SignUp extends React.Component {
                                     </Label>
                                     <small>
                                         <NavLink to="/term" target="_blank" className="mt-1">
-                                            Bạn đòng ý với điều khoản và dịch vụ của chúng tôi
+                                            Bạn đồng ý với điều khoản và dịch vụ của chúng tôi
                                         </NavLink>
                                     </small>
                                 </FormGroup>
