@@ -89,7 +89,7 @@ class SignIn extends React.Component {
                                             className="img--user--square-7x mb-2"
                                         />
                                     </div>
-                                    <h1 className="text-center signin-text-fwork">Smart Farm</h1>
+                                    <h1 className="text-center signin-text-fwork">Nông trại thông minh</h1>
                                     <Form onSubmit={this.handleSubmit}>
                                         <FormGroup>
                                             <Input
@@ -102,7 +102,7 @@ class SignIn extends React.Component {
                                                 invalid={submitted && !email ? true : false}
                                             />
                                             <FormFeedback invalid>
-                                                Email is a required field!
+                                                Email là trường bắt buộc bạn cần nhập!
                                             </FormFeedback>
                                         </FormGroup>
                                         <FormGroup>
@@ -116,7 +116,7 @@ class SignIn extends React.Component {
                                                 invalid={submitted && !password ? true : false}
                                             />
                                             <FormFeedback invalid>
-                                                Passwords is a required field!
+                                                Passwords là trường bắt buộc bạn cần nhập!
                                             </FormFeedback>
                                             <small>
                                                 <Link className="text-password" to="/auth/reset-password">Fogot Password</Link>
@@ -129,7 +129,7 @@ class SignIn extends React.Component {
                                                         size="mb-3"
                                                         className="btn btn-block text-capitalize"
                                                     >
-                                                        SignIn
+                                                       Đăng nhập
                                                     </Button>
                                                     :
                                                     <LoadingSprinner />
@@ -141,7 +141,7 @@ class SignIn extends React.Component {
                                 
                                 
                                     <div className="text-center mt-2">
-                                        <NavLink to="/auth/sign-up">Do not have an account. Signup?</NavLink>
+                                        <NavLink to="/auth/sign-up">Tạo tài khoản mới?</NavLink>
                                     </div>
                                 </div>
                             </CardBody>

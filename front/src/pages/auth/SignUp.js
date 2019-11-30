@@ -121,7 +121,7 @@ class SignUp extends React.Component {
                         <Alert className="p-2" color="danger" isOpen={success ? false : true}>{error}</Alert>
                     }
                     <Card className="signup-card">
-                        <h1 className="text-center signup-text-register mt-3">Register</h1>
+                        <h1 className="text-center signup-text-register mt-3">Đăng ký</h1>
                         <CardBody className="signup-card-body">
                             <Form onSubmit={this.handleSubmit}>
                                 <FormGroup>
@@ -137,87 +137,87 @@ class SignUp extends React.Component {
                                     />
                                     {!email &&
                                         <FormFeedback invalid>
-                                            Email s a required field!
+                                            Email là trường bắt buộc bạn cần nhập!
                                     </FormFeedback>
                                     }
                                     {email && (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email)) &&
                                         <FormFeedback invalid>
-                                            Email is not valid!
+                                            Email không tồn tại!
                                     </FormFeedback>
                                     }
                                 </FormGroup>
                                 <FormGroup>
-                                    <Label className="text-primary">Full Name</Label>
+                                    <Label className="text-primary">Tên đầy đủ</Label>
                                     <Input
                                         bsSize="mb-3"
                                         type="text"
                                         name="full_name"
                                         value={this.state.full_name}
                                         onChange={this.handleChange}
-                                        placeholder="full name"
+                                        placeholder="tên đầy đủ"
                                         invalid={submitted && !full_name ? true : false}
                                     />
                                     <FormFeedback invalid>
-                                        Full name is a required field!
+                                        Đây là trường bắt buộc bạn cần nhập!
                                     </FormFeedback>
                                 </FormGroup>
                                 <FormGroup>
-                                    <Label className="text-primary ">Password</Label>
+                                    <Label className="text-primary ">Mật khẩu</Label>
                                     <Input
                                         bsSize="mb-3"
                                         type="password"
                                         name="password"
                                         value={this.state.password}
                                         onChange={this.handleChange}
-                                        placeholder="password"
+                                        placeholder="mật khẩu"
                                         invalid={submitted && this.validatePassword(this.state.password) ? true : false}
                                     />
                                     {!password &&
                                         <FormFeedback invalid>
-                                            Password is a required field!
+                                             Đây là trường bắt buộc bạn cần nhập!
                                     </FormFeedback>
                                     }
 
                                     {password && (!/(?=^.{8,}$).*$/i.test(password)) &&
                                         <FormFeedback invalid>
-                                            Your password must contain at least 8 or more characters
+                                            Mật khẩu của bạn phải chứa ít nhất 8 ký tự hoặc hơn!
                                     </FormFeedback>
                                     }
                                 </FormGroup>
                                 <FormGroup>
-                                    <Label className="text-primary">Confirm Password</Label>
+                                    <Label className="text-primary">Xác thực mật khẩu</Label>
                                     <Input
                                         bsSize="mb-3"
                                         type="password"
                                         name="confirm_password"
                                         value={this.state.confirm_password}
                                         onChange={this.handleChange}
-                                        placeholder="confirm password"
+                                        placeholder="xác thực mật khẩu"
                                         invalid={submitted && password !== confirm_password ? true : false}
                                     />
                                     <FormFeedback invalid>
-                                        Confirm password incorrect. Please retype the password
+                                        Xác thực mật khẩu không chính xác. Vui lòng nhập lại!
                                     </FormFeedback>
                                 </FormGroup>
                                 <FormGroup>
-                                    <Label className="text-primary">Phone Number</Label>
+                                    <Label className="text-primary">Số điện thoại</Label>
                                     <Input
                                         bsSize="mb-3"
                                         type="number"
                                         name="phone_number"
                                         value={this.state.phone_number}
                                         onChange={this.handleChange}
-                                        placeholder="phone number"
+                                        placeholder="số điện thoại"
                                         invalid={submitted && this.validatePhoneNumber(this.state.phone_number) ? true : false}
                                     />
                                     {!phone_number &&
                                         <FormFeedback invalid>
-                                            Phone number s a required field!
+                                           Đây là trường bắt buộc bạn cần nhập!
                                     </FormFeedback>
                                     }
                                     {phone_number && (!/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/i.test(phone_number)) &&
                                         <FormFeedback invalid>
-                                            Phone number is not valid!
+                                           Số điện thoại không tồn tại!
                                     </FormFeedback>
                                     }
                                 </FormGroup>
@@ -227,7 +227,7 @@ class SignUp extends React.Component {
                                     </Label>
                                     <small>
                                         <NavLink to="/term" target="_blank" className="mt-1">
-                                            You agree to our terms of service
+                                            Bạn đòng ý với điều khoản và dịch vụ của chúng tôi
                                         </NavLink>
                                     </small>
                                 </FormGroup>
@@ -237,7 +237,7 @@ class SignUp extends React.Component {
                                             color="primary"
                                             size="mb-3"
                                             disabled={!terms ? true : false}>
-                                            Sign up
+                                            Đăng ký
                                     </Button>
                                         :
                                         <LoadingSprinner />
