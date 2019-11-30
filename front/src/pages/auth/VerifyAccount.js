@@ -146,7 +146,7 @@ class VerifyAccount extends Component {
                                                             size="mb-3 mt-1 "
                                                             className="btn btn-block text-capitalize mt-2"
                                                         >
-                                                            Mã xác thực
+                                                            Nhấn để tạo tài khoản thành công!
                                                         </Button>
                                                         :
                                                         <LoadingSprinner />
