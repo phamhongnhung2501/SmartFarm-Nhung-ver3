@@ -112,14 +112,14 @@ class SignIn extends React.Component {
                                                 name="password"
                                                 value={this.state.password}
                                                 onChange={this.handleChange}
-                                                placeholder="Password"
+                                                placeholder="Mật khẩu"
                                                 invalid={submitted && !password ? true : false}
                                             />
                                             <FormFeedback invalid>
                                                 Passwords là trường bắt buộc bạn cần nhập!
                                             </FormFeedback>
                                             <small>
-                                                <Link className="text-password" to="/auth/reset-password">Fogot Password</Link>
+                                                <Link className="text-password" to="/auth/reset-password">Quên mật khẩu?</Link>
                                             </small>
                                             <div className="text-center mt-3">
                                                 {loading === false ?
