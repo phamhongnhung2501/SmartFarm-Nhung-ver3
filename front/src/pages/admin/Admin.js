@@ -475,10 +475,10 @@ class Admin extends React.Component {
 	render() {
 		return (
 			<Tabs defaultActiveKey="setting" >
-				<Tab eventKey="setting" title="Setting">
+				<Tab eventKey="setting" title="Cài đặt">
 					<General />
 				</Tab>
-				<Tab eventKey="members" title="Members">
+				<Tab eventKey="members" title="Thành viên">
 					<Members />
 				</Tab>
 			</Tabs>
