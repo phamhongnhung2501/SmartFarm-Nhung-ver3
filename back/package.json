@@ -26,7 +26,7 @@
     "node-fetch": "^2.6.0",
     "node-gyp": "^6.0.0",
     "node-notifier": "^6.0.0",
-    "nodemailer": "^6.3.1",
+    "nodemailer": "^6.4.16",
     "nodemon": "^1.19.2",
     "otplib": "^11.0.1",
     "rebuild": "^0.1.2",
